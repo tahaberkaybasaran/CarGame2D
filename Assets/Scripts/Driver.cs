@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float carRotateSpeed = 1.0f;
+    [SerializeField] float carTransformSpeed = 0.03f;
     void Start()
     {
 
@@ -13,7 +14,10 @@ public class Driver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 0.1f);
-        transform.Translate(0, 0.01f, 0);
+        float carRotateSpeedAmount = Input.GetAxis("Horizontal") * carRotateSpeed;
+        float carSpeedRotation = Input.GetAxis("Vertical") * carTransformSpeed;
+        Debug.Log(carRotateSpeedAmount);
+        transform.Rotate(0, 0, -carRotateSpeedAmount);
+        transform.Translate(0, carSpeedRotation, 0);
     }
 }
