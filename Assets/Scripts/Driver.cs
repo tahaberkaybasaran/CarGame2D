@@ -16,7 +16,7 @@ public class Driver : MonoBehaviour
     {
         float carRotateSpeedAmount = Input.GetAxis("Horizontal") * carRotateSpeed * Time.deltaTime;
         float carSpeedRotation = Input.GetAxis("Vertical") * carTransformSpeed * Time.deltaTime;
-        Debug.Log(carRotateSpeedAmount);
+        // Debug.Log(carRotateSpeedAmount);
         transform.Rotate(0, 0, -carRotateSpeedAmount);
         transform.Translate(0, carSpeedRotation, 0);
     }
