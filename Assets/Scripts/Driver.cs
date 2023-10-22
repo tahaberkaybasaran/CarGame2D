@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
-    [SerializeField] float carRotateSpeed = 1.0f;
-    [SerializeField] float carTransformSpeed = 0.03f;
+    [SerializeField] float carRotateSpeed = 300.0f;
+    [SerializeField] float carTransformSpeed = 20.0f;
     void Start()
     {
 
