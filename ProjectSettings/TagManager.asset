@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Customer
   - FinishPoint
+  - SpeedBoost
+  - SpeedDown
   layers:
   - Default
   - TransparentFX
